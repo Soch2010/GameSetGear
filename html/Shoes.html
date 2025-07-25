@@ -15,13 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/shoes.css" />
     <title>Game Set Gear</title>
   </head>
   <body>
-    <header class="header">
+    <header class="WEBNAV">
       <a href="index.html">
-        <img class="logo" alt="Tennis Gear Review Logo" src="logo-png.png" />
+        <img class="logo" alt="Tennis Gear Review Logo" src="../images/logo-png.png" />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -42,8 +42,12 @@
 <body>
   <p>Tennis / Shoes</p>
   <h2>Shoes</h2>
-  <p>Explore our wide range of tennis shoes, designed for all court types. Find the perfect shoe to elevate your game.</p>
-  
+
+<div class="wrapper">
+      <p class="textonimg">
+       Explore our wide range of tennis rackets, designed for all skill levels and playing styles. Find the perfect racket to elevate your game.
+      </p>
+      </div>
   <label for="brands">Choose a brand:</label>
 <h4>Brands</h4>
 <select name="brand" id="brands">
@@ -53,14 +57,26 @@
   <option value="Wilson">Reebok</option>
 </select>
 <h4>Price($)</h4>
-<div class="sliderbar1">
-  <input type="range" min="0" max="100" value="50" class="slider" id="range">
-  <div class="value">16000</div>
-</div>
+<div class="slider-wrapper">
+    <div class="range-container">
+      <input type="range" min="0" max="500" value="50" id="range-min" />
+      <input type="range" min="0" max="500" value="300" id="range-max" />
+      <div class="range-track"></div>
+      <div class="range-values">
+        <span id="min-val">260</span>
+        <span id="max-val">345</span>
+      </div>
+    </div>
+  </div>
 <h3>Showing x/x results</h3>
-<a href=AsicsNovakFF3.html>
-<img src="Tennis shoes.jpeg" alt="Asics Tennis shoes" width="100" height="132">
-</a>
-<a href="AsicsNovakFF3.html"><p><strong>Court FF3 Novak (Asics)</strong></p></a>
+<div class="product-card">
+  <a href="AsicsNovakFF3.html">
+    <img src="../images/Tennis shoes.jpeg" alt="Wilson Pro Staff Racket" width="100" height="132">
+  </a>
+  <a href="AsicsNovakFF3.html".html">
+    <div class="product-title">Novak Court FF3 (Asics)</div>
+  </a>
+</div>
+
 </body>
 </html>
