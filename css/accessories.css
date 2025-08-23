@@ -162,7 +162,7 @@ img {
   top: 18px;
   left: 0;
   right: 0;
-  background: #d3d3d3; /* base track (gray) */
+  background: #d3d3d3;
   border-radius: 3px;
   z-index: 1;
 }

@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       href="https://fonts.google.com/specimen/Mogra?lang=en_Latn&categoryFilters=Feeling:%2FExpressive%2FPlayful"
     />
+    <script
+      src="https://kit.fontawesome.com/51d897dbeb.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="../css/Homepage.css" />
 
@@ -36,11 +40,24 @@
         <a class="main-nav-link" href="../html/accesories2.html">Accessories</a>
       </li>
     </nav>
-    <div class="search-container">
-      <input type="text" class="search-input" placeholder="Search..." />
-      <button class="search-button">
-        <i class="fa fa-search"></i>
-      </button>
+
+    <div class="search-box">
+      <div class="row">
+        <input
+          type="text"
+          id="input-box"
+          placeholder="Search anything"
+          autocomplete="off"
+        />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="result-box">
+        <ul>
+          <li>Rackets</li>
+          <li>Shoes</li>
+        </ul>
+      </div>
+      <script src="../js/search.js"></script>
     </div>
   </header>
   <body>
