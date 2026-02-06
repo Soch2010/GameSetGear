@@ -1,22 +1,52 @@
-let availableKeywords = [rackets, shoes, accessories];
-const resultsBox = document.querySelector(".result-box");
-const inputBox = document.getElementById("input-box");
+const searchInput = document.getElementById("input-box");
+const resultBox = document.querySelector(".result-box");
 
-inputBox.onkeyup = function () {
-  let result = [];
-  let input = inputBox.value;
-  if (input.length) {
-    result = availableKeywords.filter((keyword) => {
-      return keyword.toLowerCase().includes(input.toLowerCase());
-    });
-    console.log(result);
+// Search data (you can expand this later)
+const searchItems = [
+  "Tennis Rackets",
+  "Tennis Shoes",
+  "Tennis Accessories",
+  "Wilson Rackets",
+  "Babolat Rackets",
+  "Nike Tennis Shoes",
+  "Adidas Tennis Shoes",
+  "Grip Tape",
+  "Overgrips",
+  "Tennis Balls",
+  "Strings",
+];
+
+// Listen for typing
+searchInput.addEventListener("keyup", function () {
+  const input = searchInput.value.toLowerCase();
+  resultBox.innerHTML = "";
+
+  if (input.length === 0) {
+    return;
   }
-  display(result);
-};
-function display(result) {
-  const content = result.map((list) => {
-    return "<li>" + list + "</li>";
+
+  const filteredResults = searchItems.filter((item) =>
+    item.toLowerCase().includes(input)
+  );
+
+  if (filteredResults.length === 0) {
+    resultBox.innerHTML = "<ul><li>No results found</li></ul>";
+    return;
+  }
+
+  const ul = document.createElement("ul");
+
+  filteredResults.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+
+    li.addEventListener("click", function () {
+      searchInput.value = item;
+      resultBox.innerHTML = "";
+    });
+
+    ul.appendChild(li);
   });
 
-  resultsBox.innerHTML = "<ul>" + content + "</ul>";
-}
+  resultBox.appendChild(ul);
+});

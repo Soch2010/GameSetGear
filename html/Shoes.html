@@ -6,77 +6,122 @@
     <meta
       name="description"
       content="Tennis product review site to help you find your tennis needs"
-      .
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="logo-png.png" />
+
+    <title>Game Set Gear</title>
+
+    <link rel="icon" href="../images/logo-png.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/shoes.css" />
-    <title>Game Set Gear</title>
   </head>
+
   <body>
+    <!-- NAVBAR -->
     <header class="WEBNAV">
-      <a href="index.html">
-        <img class="logo" alt="Tennis Gear Review Logo" src="../images/logo-png.png" />
+      <a href="#">
+        <img
+          class="logo"
+          alt="Tennis Gear Review Logo"
+          src="../images/logo-png.png"
+        />
       </a>
+
       <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="../html/rackets.html">Rackets</a></li>
-          <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
-          <li><a class="main-nav-link" href="../html/accesories2.html">Accessories</a></li>
+        <ul>
+          <li>
+            <a class="main-nav-link" href="../html/rackets.html">Rackets</a>
+          </li>
+          <li><a class="main-nav-link" href="../html/shoes.html">Shoes</a></li>
+          <li>
+            <a class="main-nav-link" href="../html/accesories2.html"
+              >Accessories</a
+            >
+          </li>
         </ul>
       </nav>
-      <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search..." />
-        <button class="search-button">
-          <i class="fa fa-search"></i>
-        </button>
+
+      <div class="search-box">
+        <div class="row">
+          <input
+            type="text"
+            id="input-box"
+            placeholder="Search anything"
+            autocomplete="off"
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="result-box"></div>
       </div>
     </header>
-  </head>
-</body>
-<body>
-  <p>Tennis / Shoes</p>
-  <h2>Shoes</h2>
 
-<div class="wrapper">
-      <p class="textonimg">
-       Explore our wide range of tennis rackets, designed for all skill levels and playing styles. Find the perfect racket to elevate your game.
-      </p>
-      </div>
-  <label for="brands">Choose a brand:</label>
-<h4>Brands</h4>
-<select name="brand" id="brands">
-  <option value="Babolat">Asics</option>
-  <option value="Head">Nike</option>
-  <option value="Yonex">Adidas</option>
-  <option value="Wilson">Reebok</option>
-</select>
-<h4>Price($)</h4>
-<div class="slider-wrapper">
-    <div class="range-container">
-      <input type="range" min="0" max="500" value="50" id="range-min" />
-      <input type="range" min="0" max="500" value="300" id="range-max" />
-      <div class="range-track"></div>
-      <div class="range-values">
-        <span id="min-val">260</span>
-        <span id="max-val">345</span>
-      </div>
-    </div>
-  </div>
-<h3>Showing x/x results</h3>
-<div class="product-card">
-  <a href="AsicsNovakFF3.html">
-    <img src="../images/Tennis shoes.jpeg" alt="Wilson Pro Staff Racket" width="100" height="132">
-  </a>
-  <a href="AsicsNovakFF3.html".html">
-    <div class="product-title">Novak Court FF3 (Asics)</div>
-  </a>
-</div>
+    <script src="../js/search.js"></script>
 
-</body>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <p>Tennis / Shoes</p>
+      <h2>Shoes</h2>
+
+      <div class="wrapper">
+        <p class="textonimg">
+          Explore our wide range of tennis shoes, designed for all skill levels
+          and playing styles. Find the perfect pair to elevate your game.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="filters">
+      <h4>Brands</h4>
+      <div class="custom-select">
+        <select name="brand" id="brands">
+          <option value="Asics">Asics</option>
+          <option value="Nike">Nike</option>
+          <option value="Adidas">Adidas</option>
+          <option value="Reebok">Reebok</option>
+        </select>
+      </div>
+
+      <h4>Price ($)</h4>
+      <div class="slider-wrapper">
+        <div class="range-container">
+          <input type="range" min="0" max="500" value="50" id="range-min" />
+          <input type="range" min="0" max="500" value="300" id="range-max" />
+
+          <div class="range-track"></div>
+
+          <div class="range-values">
+            <span id="min-val">50</span>
+            <span id="max-val">300</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results">
+      <h3>Showing x / x results</h3>
+
+      <div class="product-card">
+        <a href="AsicsNovakFF3.html">
+          <img
+            src="../images/Tennis shoes.jpeg"
+            alt="Novak Court FF3 Asics"
+            width="100"
+            height="132"
+          />
+        </a>
+
+        <a href="AsicsNovakFF3.html">
+          <div class="product-title">Novak Court FF3 (Asics)</div>
+        </a>
+      </div>
+    </section>
+  </body>
 </html>

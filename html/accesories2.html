@@ -6,10 +6,12 @@
     <meta
       name="description"
       content="Tennis product review site to help you find your tennis needs"
-      .
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" img-src="logo-png.png" href="index.html" />
+
+    <title>Game Set Gear</title>
+
+    <link rel="icon" href="../images/logo-png.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
@@ -17,10 +19,10 @@
     />
 
     <link rel="stylesheet" href="../css/accessories.css" />
-
-    <title>Game Set Gear</title>
   </head>
+
   <body>
+    <!-- NAVBAR -->
     <header class="WEBNAV">
       <a href="index.html">
         <img
@@ -29,19 +31,23 @@
           src="../images/logo-png.png"
         />
       </a>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
             <a class="main-nav-link" href="../html/rackets.html">Rackets</a>
           </li>
-          <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
           <li>
-            <a class="main-nav-link" href="../html/accesories2.html"
-              >Accessories</a
-            >
+            <a class="main-nav-link" href="../html/Shoes.html">Shoes</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="../html/accesories2.html">
+              Accessories
+            </a>
           </li>
         </ul>
       </nav>
+
       <div class="search-container">
         <input type="text" class="search-input" placeholder="Search..." />
         <button class="search-button">
@@ -49,52 +55,68 @@
         </button>
       </div>
     </header>
-  </body>
-  <body>
-    <p>Tennis / Accesories</p>
-    <h2>Accesories</h2>
-    <p>Explore our wide range of accesories, designed for all players.</p>
-    <div class="wrapper">
-      <p class="textonimg">
-        Explore our wide range of accesories, designed for all players.
-      </p>
-    </div>
 
-    <label for="Accesory">Choose an accesory:</label>
-    <div class="custom-select" style="width: 200px">
-      <select>
-        <option value="0">Select Accessory:</option>
-        <option value="1">Grips</option>
-        <option value="2">Head Tape</option>
-        <option value="3">Vibration Dampners</option>
-        <option value="4">Stencils</option>
-      </select>
-    </div>
-    <h4>Price($)</h4>
-    <div class="slider-wrapper">
-      <div class="range-container">
-        <input type="range" min="0" max="500" value="50" id="range-min" />
-        <input type="range" min="0" max="500" value="300" id="range-max" />
-        <div class="range-track"></div>
-        <div class="range-values">
-          <span id="min-val">5</span>
-          <span id="max-val">15</span>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <p>Tennis / Accesories</p>
+      <h2>Accesories</h2>
+
+      <div class="wrapper">
+        <p class="textonimg">
+          Explore our wide range of accesories, designed for all players.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="filters">
+      <label for="Accesory">Choose an accesory:</label>
+
+      <div class="custom-select" style="width: 200px">
+        <select id="Accesory">
+          <option value="0">Select Accessory:</option>
+          <option value="1">Grips</option>
+          <option value="2">Head Tape</option>
+          <option value="3">Vibration Dampners</option>
+          <option value="4">Stencils</option>
+        </select>
+      </div>
+
+      <h4>Price ($)</h4>
+
+      <div class="slider-wrapper">
+        <div class="range-container">
+          <input type="range" min="0" max="500" value="50" id="range-min" />
+          <input type="range" min="0" max="500" value="300" id="range-max" />
+
+          <div class="range-track"></div>
+
+          <div class="range-values">
+            <span id="min-val">5</span>
+            <span id="max-val">15</span>
+          </div>
         </div>
       </div>
-    </div>
-    <h3>Showing x/x results</h3>
-    <div class="product-card">
-      <a href="WilsonProOvergrip.html">
-        <img
-          src="../images/WilsonProOvergrip.jpeg"
-          alt="Wilson Pro Staff Racket"
-          width="100"
-          height="132"
-        />
-      </a>
-      <a href="../html/WilsonProOvergrip.html">
-        <div class="product-title">Wilson Pro Overgrip</div>
-      </a>
-    </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results">
+      <h3>Showing x / x results</h3>
+
+      <div class="product-card">
+        <a href="../html/WilsonProOvergrip.html">
+          <img
+            src="../images/WilsonProOvergrip.jpeg"
+            alt="Wilson Pro Overgrip"
+            width="100"
+            height="132"
+          />
+        </a>
+
+        <a href="../html/WilsonProOvergrip.html">
+          <div class="product-title">Wilson Pro Overgrip</div>
+        </a>
+      </div>
+    </section>
   </body>
 </html>

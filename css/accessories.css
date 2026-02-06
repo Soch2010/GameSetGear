@@ -1,225 +1,226 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 .WEBNAV {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a2faa3;
-
-  height: 9.6rem;
-  padding: 0 4.8rem;
-  position: relative;
+  height: 72px;
+  padding: 0 48px;
+  border-bottom: 1px solid #e5e7eb;
 }
+
 .logo {
-  height: 5.2rem;
+  height: 44px;
 }
-.main-nav-list {
-  list-style: none;
+
+.main-nav {
   display: flex;
-  align-items: center;
-  gap: 4.8rem;
+  gap: 32px;
+  list-style: none;
 }
-.main-nav-link:link,
-.main-nav-link:visited {
-  display: inline-block;
+
+.main-nav-link {
   text-decoration: none;
-  color: #333;
+  font-size: 15px;
   font-weight: 500;
-  font-size: 1.4rem;
-  transition: all 0.3s;
-}
-.main-nav-link:hover,
-.main-nav-link:active {
-  color: #3d5f3d;
-}
-.main-nav-link:link,
-.main-nav-link:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.4rem;
-  transition: all 0.3s;
+  color: #111827;
 }
 
-.main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active {
-  background-color: #cf711f;
+.main-nav-link:hover {
+  color: #22c55e;
 }
 
-.search-container {
-  position: relative;
-  width: 50px;
-  transition: width 0.4s ease-in-out;
-  overflow: hidden;
-  border-radius: 50%;
+/* =========================
+   BREADCRUMB + TITLE
+========================= */
+body > p {
+  margin-top: 32px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #6b7280;
 }
 
-.search-input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  font-size: 16px;
-  background-color: #f1f1f1;
-  outline: none;
+h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-.search-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 100%;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.search-container:focus-within {
-  width: 200px;
-}
-img {
-  width: 125px;
-  height: 125px;
-}
+/* =========================
+   HERO
+========================= */
 .wrapper {
-  position: relative;
-  width: 1250px;
-  height: 500px;
-  margin: 0 auto;
-  background: url(file:///Users/soch2028/Desktop/Personal%20Project/GameSetGear/images/Accessories.png);
+  height: 260px;
+  margin-bottom: 40px;
+  border-radius: 14px;
+  background-image: url("../images/Accessories.png");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .wrapper::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .textonimg {
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-family: "Mogra" "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   position: absolute;
-  text-align: center;
-  top: 80%;
-  width: 100%;
-  font-weight: 900;
-  color: #fff;
+  bottom: 32px;
+  left: 32px;
+  max-width: 520px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+/* =========================
+   FILTER SECTION
+========================= */
+label {
+  display: block;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+/* =========================
+   SELECT DROPDOWN
+========================= */
+.custom-select {
+  width: 260px;
 }
 
 .custom-select select {
-  width: 175%;
-  padding: 10px 40px 10px 15px;
-  border: 1.5px solid #c8e6c9;
-  border-radius: 8px;
-  background-color: #f9fef9;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  color: #222;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2366bb6a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
-  cursor: pointer;
-  box-shadow: none;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #ffffff;
 }
 
-.custom-select {
-  width: 200px;
-  position: relative;
-}
-
+/* =========================
+   PRICE SLIDER (FIXED)
+========================= */
 .slider-wrapper {
-  width: 320px;
-  margin-left: 0;
-  text-align: left;
+  width: 260px;
+  margin-top: 8px;
 }
 
 .range-container {
   position: relative;
-  height: 40px;
+  height: 28px;
+}
+
+.range-container input[type="range"] {
+  position: absolute;
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.range-container input::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #22c55e;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
 }
 
 .range-values {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
 }
 
-.range-track {
-  position: absolute;
-  height: 6px;
-  top: 18px;
-  left: 0;
-  right: 0;
-  background: #d3d3d3;
-  border-radius: 3px;
-  z-index: 1;
+/* =========================
+   RESULTS HEADER
+========================= */
+h3 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #374151;
 }
 
-input[type="range"] {
-  position: absolute;
-  width: 100%;
-  top: 12px;
-  background: none;
-  pointer-events: none;
-  appearance: none;
-  z-index: 3;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #28d138;
-  pointer-events: all;
-  cursor: pointer;
-  z-index: 4;
-}
-
-input[type="range"]::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #28d138;
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.range-fill {
-  position: absolute;
-  height: 6px;
-  top: 18px;
-  background: #28d138;
-  border-radius: 3px;
-  z-index: 2;
-}
-
+/* =========================
+   PRODUCT CARD (ACCESSORIES)
+========================= */
 .product-card {
-  width: 140px;
+  margin-top: 24px;
+  width: 220px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 12px;
   text-align: center;
-  font-family: sans-serif;
-  background-color: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
 .product-title {
-  font-weight: bold;
-  margin-top: 8px;
   font-size: 14px;
-  color: #000;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
   text-decoration: none;
+  color: inherit;
 }
