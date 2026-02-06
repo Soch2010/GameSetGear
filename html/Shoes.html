@@ -22,47 +22,37 @@
 
   <body>
     <!-- NAVBAR -->
-    <header class="WEBNAV">
-      <a href="#">
-        <img
-          class="logo"
-          alt="Tennis Gear Review Logo"
-          src="../images/logo-png.png"
+       <header class="WEBNAV">
+     <a href="../html/index.html">
+  <img
+    class="logo"
+    alt="Tennis Gear Review Logo"
+    src="../images/logo-png.png"
+  />
+    </a>
+    <nav class="main-nav">
+      <li><a class="main-nav-link" href="../html/rackets.html">Rackets</a></li>
+      <li><a class="main-nav-link" href="../html/shoes.html">Shoes</a></li>
+      <li>
+        <a class="main-nav-link" href="../html/accesories2.html">Accessories</a>
+      </li>
+    </nav>
+
+    <div class="search-box">
+      <div class="row">
+        <input
+          type="text"
+          id="input-box"
+          placeholder="Search anything"
+          autocomplete="off"
         />
-      </a>
-
-      <nav class="main-nav">
-        <ul>
-          <li>
-            <a class="main-nav-link" href="../html/rackets.html">Rackets</a>
-          </li>
-          <li><a class="main-nav-link" href="../html/shoes.html">Shoes</a></li>
-          <li>
-            <a class="main-nav-link" href="../html/accesories2.html"
-              >Accessories</a
-            >
-          </li>
-        </ul>
-      </nav>
-
-      <div class="search-box">
-        <div class="row">
-          <input
-            type="text"
-            id="input-box"
-            placeholder="Search anything"
-            autocomplete="off"
-          />
-          <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-        <div class="result-box"></div>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
+      <div class="result-box"></div>
+      <script src="../js/search.js"></script>
+    </div>
     </header>
-
-    <script src="../js/search.js"></script>
-
+  </head>
     <!-- PAGE HEADER -->
     <section class="page-header">
       <p>Tennis / Shoes</p>
