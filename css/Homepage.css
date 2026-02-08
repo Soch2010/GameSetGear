@@ -207,7 +207,7 @@ button .fa-solid {
   margin: 3rem auto;
   border-radius: 16px;
   overflow: hidden;
-  background-image: url("../images/homepage.png");
+  background-image: url("images/homepage.png");
   background-size: cover;
   background-position: center;
 }
@@ -252,7 +252,9 @@ button .fa-solid {
   border-radius: 14px;
   background-color: var(--card-bg);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .popularcategories .img img:hover {
