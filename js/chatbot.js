@@ -1,46 +1,54 @@
-const chatForm = document.getElementById("chat-form");
-const chatInput = document.getElementById("chat-input");
+const form = document.getElementById("chat-form");
+const input = document.getElementById("chat-input");
 const chatMessages = document.getElementById("chat-messages");
 
-function addMessage(text, type) {
-  const div = document.createElement("div");
-  div.classList.add("msg", type);
-  div.textContent = text;
-  chatMessages.appendChild(div);
+function addMessage(text, sender) {
+  const msg = document.createElement("div");
+  msg.classList.add("message", sender);
+  msg.textContent = text;
+  chatMessages.appendChild(msg);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-addMessage(
-  "Hey! 👋 Ask me anything about tennis rackets, shoes, or accessories on Game Set Gear.",
-  "bot"
-);
+function botTyping() {
+  const typing = document.createElement("div");
+  typing.classList.add("message", "bot", "typing");
+  typing.textContent = "Typing...";
+  chatMessages.appendChild(typing);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+  return typing;
+}
 
-chatForm.addEventListener("submit", async (e) => {
+async function getAIResponse(userText) {
+  const res = await fetch("/.netlify/functions/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userText }),
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    console.error(data);
+    return "⚠️ Error: AI could not respond. Check your Netlify function logs.";
+  }
+
+  return data.reply;
+}
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const message = chatInput.value.trim();
-  if (!message) return;
+  const userText = input.value.trim();
+  if (!userText) return;
 
-  addMessage(message, "user");
-  chatInput.value = "";
+  addMessage(userText, "user");
+  input.value = "";
 
-  addMessage("Typing...", "bot");
+  const typingEl = botTyping();
 
-  try {
-    const res = await fetch("/.netlify/functions/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    });
+  const reply = await getAIResponse(userText);
 
-    const data = await res.json();
-
-    // remove Typing...
-    chatMessages.lastChild.remove();
-
-    addMessage(data.reply || "No reply received.", "bot");
-  } catch (err) {
-    chatMessages.lastChild.remove();
-    addMessage("Error connecting to the AI.", "bot");
-  }
+  typingEl.remove();
+  addMessage(reply, "bot");
 });
