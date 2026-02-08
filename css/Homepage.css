@@ -234,6 +234,10 @@ button .fa-solid {
   text-align: center;
 }
 
+.hero-link {
+  display: none;
+}
+
 /* =========================
    POPULAR CATEGORIES
 ========================= */
