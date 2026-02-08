@@ -207,7 +207,7 @@ button .fa-solid {
   margin: 3rem auto;
   border-radius: 16px;
   overflow: hidden;
-  background-image: url("images/homepage.png");
+  background-image: url("../images/homepage.png");
   background-size: cover;
   background-position: center;
 }
