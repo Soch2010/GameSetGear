@@ -19,23 +19,37 @@
     <title>Game Set Gear</title>
   </head>
   <body>
-    <header class="WEBNAV">
-     <a href="../index.html">
-        <img class="logo" alt="Tennis Gear Review Logo" src="../images/logo-png.png" />
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="../html/rackets.html">Rackets</a></li>
-          <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
-          <li><a class="main-nav-link" href="../html/accesories2.html">Accessories</a></li>
-        </ul>
-      </nav>
-      <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search..." />
-        <button class="search-button">
-          <i class="fa fa-search"></i>
-        </button>
+   <header class="WEBNAV">
+    <a href="../index.html">
+  <img
+    class="logo"
+    alt="Tennis Gear Review Logo"
+    src="../images/logo-png.png"
+  />
+</a>
+
+    </a>
+    <nav class="main-nav">
+      <li><a class="main-nav-link" href="../html/rackets.html">Rackets</a></li>
+      <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
+      <li>
+        <a class="main-nav-link" href="../html/accesories2.html">Accessories</a>
+      </li>
+    </nav>
+
+    <div class="search-box">
+      <div class="row">
+        <input
+          type="text"
+          id="input-box"
+          placeholder="Search anything"
+          autocomplete="off"
+        />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
+      <div class="result-box"></div>
+      <script src="../js/search.js"></script>
+    </div>
     </header>
   </head>
 </body>
