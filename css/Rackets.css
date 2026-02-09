@@ -206,13 +206,13 @@ h4 {
   color: #111827;
 }
 
-.custom-select,
+.brandFilter,
 .slider-wrapper {
   width: 260px;
 }
 
 /* ========================= SELECT DROPDOWN ========================= */
-.custom-select select {
+.brandFilter select {
   width: 100%;
   padding: 12px 14px;
   border-radius: 10px;
