@@ -1,4 +1,82 @@
 /* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =========================
+   CSS VARIABLES
+========================= */
+:root {
+  --primary: #a2faa3;
+
+  --green-accent: #a7f3a0;
+  --green-soft: #eef9f0;
+
+  --bg-main: #f9faf8;
+  --bg-light: #f8f9f7;
+  --card-bg: #ffffff;
+
+  --text-main: #1f2933;
+  --text-dark: #1f2933;
+  --text-muted: #6b7280;
+
+  --border-light: #e5e7eb;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+body > h1,
+body > h2,
+.popularcategories {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin: 4rem auto 2rem;
+  color: var(--text-main);
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 5rem auto 2rem;
+  color: var(--text-main);
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--green-accent);
+  margin-top: 0.8rem;
+  border-radius: 2px;
+}
+
+/* =========================
    NAVBAR
 ========================= */
 .WEBNAV {
