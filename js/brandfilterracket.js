@@ -1,20 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const brandFilter = document.getElementById("brandFilter");
-  const productCards = document.querySelectorAll(".product-card");
+  console.log("JS loaded");
 
-  // Safety check – prevents JS errors if elements are missing
-  if (!brandFilter || productCards.length === 0) {
-    console.warn("Brand filter: elements not found");
+  const brandFilter = document.getElementById("brandFilter");
+  console.log("brandFilter:", brandFilter);
+
+  const productCards = document.querySelectorAll(".product-card");
+  console.log("productCards found:", productCards.length);
+
+  if (!brandFilter) {
+    console.error("❌ brandFilter NOT FOUND");
     return;
   }
 
   brandFilter.addEventListener("change", () => {
-    const selectedBrand = brandFilter.value.toLowerCase();
+    console.log("Dropdown changed to:", brandFilter.value);
 
     productCards.forEach((card) => {
-      const cardBrand = card.dataset.brand?.toLowerCase();
+      const brand = card.dataset.brand;
+      console.log("Card brand:", brand);
 
-      if (selectedBrand === "all" || cardBrand === selectedBrand) {
+      if (brandFilter.value === "all" || brand === brandFilter.value) {
         card.style.display = "block";
       } else {
         card.style.display = "none";
