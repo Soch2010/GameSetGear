@@ -71,12 +71,12 @@
 
     <h4>Brands</h4>
     <div class="custom-select" style="width: 200px">
-      <select>
-        <option value="0">Select Brand:</option>
-        <option value="1">Babolat</option>
-        <option value="2">Head</option>
-        <option value="3">Yonex</option>
-        <option value="4">Wilson</option>
+      <select id="brandFilter">
+        <option value="all">Select Brand:</option>
+        <option value="babolat">Babolat</option>
+        <option value="head">Head</option>
+        <option value="yonex">Yonex</option>
+        <option value="wilson">Wilson</option>
       </select>
     </div>
 
@@ -110,37 +110,19 @@
 
     <!-- PRODUCT GRID -->
     <div class="product-grid">
-      <div class="product-card">
-        <a href="WilsonProStaff.html">
-          <img
-            src="../images/Wilsonprostaff.jpg"
-            alt="Wilson Pro Staff Racket"
-          />
-        </a>
-        <a href="../html/WilsonProStaff.html">
-          <div class="product-title">Wilson Pro Staff (Black and Red)</div>
-        </a>
+      <div class="product-card" data-brand="wilson">
+        <img src="../images/Wilsonprostaff.jpg" alt="Wilson Pro Staff" />
+        <div class="product-title">Wilson Pro Staff</div>
       </div>
 
-      <div class="product-card">
-        <a href="BabolatPureAero.html">
-          <img
-            src="../images/BabolatPureAero.jpg"
-            alt="Babolat Pure Aero Racket"
-          />
-        </a>
-        <a href="../html/BabolatPureAero.html">
-          <div class="product-title">Babolat Pure Aero</div>
-        </a>
+      <div class="product-card" data-brand="babolat">
+        <img src="../images/BabolatPureAero.jpg" alt="Babolat Pure Aero" />
+        <div class="product-title">Babolat Pure Aero</div>
       </div>
 
-      <div class="product-card">
-        <a href="HeadSpeedPro.html">
-          <img src="../images/HeadSpeedPro.jpg" alt="HEAD Speed Pro Racket" />
-        </a>
-        <a href="../html/HeadSpeedPro.html">
-          <div class="product-title">HEAD Speed Pro</div>
-        </a>
+      <div class="product-card" data-brand="head">
+        <img src="../images/HeadSpeedPro.jpg" alt="Head Speed Pro" />
+        <div class="product-title">HEAD Speed Pro</div>
       </div>
     </div>
   </body>
