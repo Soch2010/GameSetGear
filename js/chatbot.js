@@ -37,28 +37,50 @@ document.addEventListener("DOMContentLoaded", () => {
     return arr[Math.floor(Math.random() * arr.length)];
   }
 
-  /* ---------- KNOWLEDGE ---------- */
+  /* ---------- KNOWLEDGE BASE ---------- */
   const KB = {
     greetings: [
       "Hey! 👋 I’m Game Set Gear AI. Ask me about rackets, shoes, or accessories.",
       "Hi! I help with tennis gear — rackets, shoes, strings, grips.",
     ],
+
     out: [
       "I can only answer questions about tennis gear 🎾",
-      "That’s outside my tennis knowledge. Try asking about rackets or shoes!",
+      "That’s outside my tennis knowledge. Try asking about rackets or accessories!",
     ],
+
     rackets: [
-      "For beginners, use a lighter racket with a larger head size (100–105 sq in).",
+      "Beginners should look for a lighter racket with a larger head size (100–105 sq in).",
       "Intermediate players usually prefer 98–102 sq in rackets for balance.",
-      "Advanced players often choose heavier rackets for control and stability.",
+      "Advanced players often choose heavier rackets for more control and stability.",
     ],
+
     shoes: [
       "Hard court shoes focus on durability and cushioning.",
-      "Clay court shoes have special grip patterns for sliding.",
+      "Clay court shoes have herringbone patterns for grip and sliding.",
       "All-court shoes work well on most surfaces.",
+    ],
+
+    grips: [
+      "Overgrips improve comfort, sweat absorption, and feel.",
+      "Tacky grips give better hold, while dry grips last longer.",
+    ],
+
+    wilsonProOvergrip: [
+      "The Wilson Pro Overgrip is 0.6 mm thick and made from polyurethane.",
+      "It has a tacky feel with excellent grip memory.",
+      "This overgrip offers high sweat absorption but medium durability.",
+      "Perforated surface helps with moisture control during long matches.",
+      "Great choice for players who want comfort and feel over durability.",
+    ],
+
+    prosCons: [
+      "Pros: Excellent tackiness, strong sweat absorption, very comfortable.",
+      "Cons: Wears out faster and needs frequent replacement.",
     ],
   };
 
+  /* ---------- BOT LOGIC ---------- */
   function getBotReply(textRaw) {
     const text = normalize(textRaw);
 
@@ -74,8 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "shoes",
       "string",
       "grip",
+      "overgrip",
       "bag",
-      "court",
+      "accessory",
       "spin",
       "power",
       "control",
@@ -90,6 +113,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (text.includes("shoe")) {
       return pick(KB.shoes);
+    }
+
+    if (text.includes("overgrip") || text.includes("grip")) {
+      if (text.includes("wilson")) {
+        return pick(KB.wilsonProOvergrip);
+      }
+      return pick(KB.grips);
+    }
+
+    if (text.includes("pros") || text.includes("cons")) {
+      return pick(KB.prosCons);
     }
 
     return "Tell me what tennis gear you’re looking for 🎾";
