@@ -4,37 +4,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
-} /* ========================= CSS VARIABLES ========================= */
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========================= CSS VARIABLES ========================= */
 :root {
   --primary: #a2faa3;
   --green-accent: #a7f3a0;
   --green-soft: #eef9f0;
+
   --bg-main: #f9faf8;
   --bg-light: #f8f9f7;
   --card-bg: #ffffff;
+
   --text-main: #1f2933;
   --text-dark: #1f2933;
   --text-muted: #6b7280;
+
   --border-light: #e5e7eb;
-} /* ===================================================== BASE ===================================================== */
-body {
-  font-family: "Rubik", sans-serif;
-  color: #1f2937;
-  background-color: #ffffff;
 }
-body {
-  max-width: none;
-  margin: 0 auto;
-  padding: 0 24px;
-} /* ===================================================== NAVIGATION ===================================================== */ /* ========================= NAVBAR ========================= */
+
+/* ========================= NAVBAR ========================= */
 .WEBNAV {
   display: flex;
   justify-content: space-between;
@@ -45,15 +47,18 @@ body {
   position: relative;
   z-index: 1;
 }
+
 .logo {
   height: 5.2rem;
 }
+
 .main-nav {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4.8rem;
 }
+
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
@@ -63,14 +68,13 @@ body {
   color: var(--text-main);
   transition: all 0.3s;
 }
+
 .main-nav-link:hover,
 .main-nav-link:active {
   color: #2f6f4e;
 }
-.main-nav-link.nav-cta:hover,
-.main-nav-link.nav-cta:active {
-  background-color: #cf711f;
-} /* ========================= SEARCH BOX ========================= */
+
+/* ========================= SEARCH BOX ========================= */
 .search-box {
   width: 250px;
   background-color: #ffffff;
@@ -78,12 +82,14 @@ body {
   border-radius: 8px;
   position: relative;
 }
+
 .row {
   display: flex;
   align-items: center;
   padding: 0 20px;
   height: 40px;
 }
+
 input {
   flex: 1;
   height: 20px;
@@ -93,20 +99,25 @@ input {
   font-size: 14px;
   color: #333;
 }
+
 input::placeholder {
   color: var(--text-muted);
 }
+
 button {
   background: transparent;
   border: 0;
   outline: 0;
 }
+
 button .fa-solid {
   width: 25px;
   font-size: 15px;
   color: #555;
   cursor: pointer;
-} /* ========================= SEARCH RESULTS ========================= */
+}
+
+/* ========================= SEARCH RESULTS ========================= */
 .result-box {
   position: absolute;
   top: 100%;
@@ -117,49 +128,39 @@ button .fa-solid {
   border-radius: 0 0 5px 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .result-box ul {
   list-style: none;
   padding: 10px;
   margin: 0;
   border-top: 1px solid #ccc;
 }
+
 .result-box li {
   padding: 8px;
   font-size: 14px;
   cursor: pointer;
 }
+
 .result-box ul li:hover {
   background: #a2faa3;
-} /* ===================================================== ALIGNMENT HELPERS ===================================================== */
-label,
-h4,
-.custom-select,
-.slider-wrapper {
-  margin-left: 0;
-  margin-right: 0;
 }
-.custom-select,
-.slider-wrapper {
-  width: 260px;
-} /* ===================================================== RANGE INPUT POINTER FIX ===================================================== */
-.range-container input[type="range"] {
-  pointer-events: none;
-}
-.range-container input[type="range"]::-webkit-slider-thumb {
-  pointer-events: all;
-  z-index: 2;
-} /* ===================================================== BREADCRUMB + TITLE ===================================================== */
+
+/* ========================= BREADCRUMB + TITLE ========================= */
 body > p {
   margin-top: 32px;
   margin-bottom: 6px;
   font-size: 14px;
   color: #6b7280;
 }
+
 h2 {
   margin-bottom: 24px;
   font-size: 32px;
   font-weight: 700;
-} /* ===================================================== HERO ===================================================== */
+}
+
+/* ========================= HERO ========================= */
 .wrapper {
   height: 260px;
   margin-bottom: 40px;
@@ -170,12 +171,14 @@ h2 {
   position: relative;
   overflow: hidden;
 }
+
 .wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.25);
 }
+
 .textonimg {
   position: absolute;
   bottom: 32px;
@@ -185,23 +188,30 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   z-index: 1;
-} /* ===================================================== FILTER SECTION ===================================================== */
+}
+
+/* ========================= FILTER SECTION ========================= */
 label {
   display: block;
   font-size: 14px;
   color: #374151;
   margin-bottom: 8px;
 }
+
 h4 {
   font-size: 14px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 8px;
   color: #111827;
-} /* ===================================================== SELECT DROPDOWN ===================================================== */
-.custom-select {
+}
+
+.custom-select,
+.slider-wrapper {
   width: 260px;
 }
+
+/* ========================= SELECT DROPDOWN ========================= */
 .custom-select select {
   width: 100%;
   padding: 12px 14px;
@@ -209,15 +219,18 @@ h4 {
   border: 1px solid #d1d5db;
   font-size: 14px;
   background: #ffffff;
-} /* ===================================================== SLIDERS ===================================================== */
+}
+
+/* ========================= SLIDERS ========================= */
 .slider-wrapper {
-  width: 260px;
   margin-top: 8px;
 }
+
 .range-container {
   position: relative;
   height: 28px;
 }
+
 .range-container input[type="range"] {
   position: absolute;
   width: 100%;
@@ -225,7 +238,9 @@ h4 {
   height: 4px;
   background: #e5e7eb;
   border-radius: 999px;
+  pointer-events: none;
 }
+
 .range-container input::-webkit-slider-thumb {
   appearance: none;
   width: 16px;
@@ -233,43 +248,63 @@ h4 {
   background: #22c55e;
   border-radius: 50%;
   cursor: pointer;
+  pointer-events: all;
 }
+
 .range-values {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
   color: #6b7280;
   margin-top: 10px;
-} /* ===================================================== RESULTS HEADER ===================================================== */
+}
+
+/* ========================= RESULTS HEADER ========================= */
 h3 {
   margin-top: 32px;
   margin-bottom: 24px;
   font-size: 14px;
   color: #374151;
-} /* ===================================================== PRODUCT CARD ===================================================== */
-.product-card {
+}
+
+/* ========================= PRODUCT GRID (KEY ADDITION) ========================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
   margin-top: 24px;
-  width: 220px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================= PRODUCT CARD ========================= */
+.product-card {
   background: #f9fafb;
   padding: 16px;
   border-radius: 12px;
   text-align: center;
   transition: all 0.2s ease;
 }
+
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
+
 .product-card img {
   height: 180px;
   object-fit: contain;
   margin-bottom: 12px;
 }
+
 .product-title {
   font-size: 14px;
   font-weight: 600;
   color: #111827;
-} /* ===================================================== LINKS ===================================================== */
+}
+
+/* ========================= LINKS ========================= */
 a {
   text-decoration: none;
   color: inherit;
