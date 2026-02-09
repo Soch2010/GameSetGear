@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,9 +6,9 @@
     <meta
       name="description"
       content="Tennis product review site to help you find your tennis needs"
-      .
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="logo-png.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -18,95 +18,137 @@
     <link rel="stylesheet" href="../css/Rackets.css" />
     <title>Game Set Gear</title>
   </head>
+
+  <body>
+    <!-- NAVBAR -->
     <header class="WEBNAV">
-    <a href="../index.html">
-  <img
-    class="logo"
-    alt="Tennis Gear Review Logo"
-    src="../images/logo-png.png"
-  />
-</a>
-
-    </a>
-    <nav class="main-nav">
-      <li><a class="main-nav-link" href="../html/rackets.html">Rackets</a></li>
-      <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
-      <li>
-        <a class="main-nav-link" href="../html/accesories2.html">Accessories</a>
-      </li>
-    </nav>
-
-    <div class="search-box">
-      <div class="row">
-        <input
-          type="text"
-          id="input-box"
-          placeholder="Search anything"
-          autocomplete="off"
+      <a href="../index.html">
+        <img
+          class="logo"
+          alt="Tennis Gear Review Logo"
+          src="../images/logo-png.png"
         />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </a>
+
+      <nav class="main-nav">
+        <li>
+          <a class="main-nav-link" href="../html/rackets.html">Rackets</a>
+        </li>
+        <li><a class="main-nav-link" href="../html/Shoes.html">Shoes</a></li>
+        <li>
+          <a class="main-nav-link" href="../html/accesories2.html"
+            >Accessories</a
+          >
+        </li>
+      </nav>
+
+      <div class="search-box">
+        <div class="row">
+          <input
+            type="text"
+            id="input-box"
+            placeholder="Search anything"
+            autocomplete="off"
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="result-box"></div>
       </div>
-      <div class="result-box"></div>
-      <script src="../js/search.js"></script>
-    </div>
     </header>
-  </head>
-<body>
-  <p>Tennis / Rackets</p>
-  <h2>Rackets</h2>
-   <div class="wrapper">
+
+    <!-- PAGE CONTENT -->
+    <p>Tennis / Rackets</p>
+    <h2>Rackets</h2>
+
+    <div class="wrapper">
       <p class="textonimg">
-       Explore our wide range of tennis rackets, designed for all skill levels and playing styles. Find the perfect racket to elevate your game.
+        Explore our wide range of tennis rackets, designed for all skill levels
+        and playing styles. Find the perfect racket to elevate your game.
       </p>
-      </div>
-  <label for="brands">Choose a brand:</label>
-<h4>Brands</h4>
-<div class="custom-select" style="width:200px;">
-  <select>
-    <option value="0">Select Brand:</option>
-    <option value="1">Babolat</option>
-    <option value="2">Head</option>
-    <option value="3">Yonex</option>
-    <option value="4">Wilson</option> 
-  </select>
-</div>
-<h4><strong>Price</strong></h4>
-<div class="slider-wrapper">
-    <div class="range-container">
-      <input type="range" min="0" max="500" value="50" id="range-min" />
-      <input type="range" min="0" max="500" value="300" id="range-max" />
-      <div class="range-track"></div>
-      <div class="range-values">
-        <span id="min-val">50</span>
-        <span id="max-val">300</span>
+    </div>
+
+    <h4>Brands</h4>
+    <div class="custom-select" style="width: 200px">
+      <select>
+        <option value="0">Select Brand:</option>
+        <option value="1">Babolat</option>
+        <option value="2">Head</option>
+        <option value="3">Yonex</option>
+        <option value="4">Wilson</option>
+      </select>
+    </div>
+
+    <h4><strong>Price</strong></h4>
+    <div class="slider-wrapper">
+      <div class="range-container">
+        <input type="range" min="0" max="500" value="50" />
+        <input type="range" min="0" max="500" value="300" />
+        <div class="range-track"></div>
+        <div class="range-values">
+          <span>50</span>
+          <span>300</span>
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-<h4>Weight(g)</h4>
-<div class="slider-wrapper">
-    <div class="range-container">
-      <input type="range" min="0" max="500" value="50" id="range-min" />
-      <input type="range" min="0" max="500" value="300" id="range-max" />
-      <div class="range-track"></div>
-      <div class="range-values">
-        <span id="min-val">260</span>
-        <span id="max-val">345</span>
+    <h4>Weight (g)</h4>
+    <div class="slider-wrapper">
+      <div class="range-container">
+        <input type="range" min="0" max="500" value="260" />
+        <input type="range" min="0" max="500" value="345" />
+        <div class="range-track"></div>
+        <div class="range-values">
+          <span>260</span>
+          <span>345</span>
+        </div>
       </div>
     </div>
-  </div>
-<h3>Showing x/x results</h3>
-<div class="product-card">
-  <a href="WilsonProStaff.html">
-    <img src="../images/Wilsonprostaff.jpg" alt="Wilson Pro Staff Racket" width="100" height="132">
-  </a>
-  <a href="../html/WilsonProStaff.html">
-    <div class="product-title">Wilson Pro Staff (Black and Red)</div>
-  </a>
-</div>
 
-</body>
+    <h3>Showing 3/3 results</h3>
 
-  </html>
+    <!-- PRODUCT CARDS -->
+    <div class="product-card">
+      <a href="WilsonProStaff.html">
+        <img
+          src="../images/Wilsonprostaff.jpg"
+          alt="Wilson Pro Staff Racket"
+          width="100"
+          height="132"
+        />
+      </a>
+      <a href="../html/WilsonProStaff.html">
+        <div class="product-title">Wilson Pro Staff (Black and Red)</div>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="BabolatPureAero.html">
+        <img
+          src="../images/BabolatPureAero.jpg"
+          alt="Babolat Pure Aero Racket"
+          width="100"
+          height="132"
+        />
+      </a>
+      <a href="../html/BabolatPureAero.html">
+        <div class="product-title">Babolat Pure Aero</div>
+      </a>
+    </div>
+
+    <div class="product-card">
+      <a href="HeadSpeedPro.html">
+        <img
+          src="../images/HeadSpeedPro.jpg"
+          alt="HEAD Speed Pro Racket"
+          width="100"
+          height="132"
+        />
+      </a>
+      <a href="../html/HeadSpeedPro.html">
+        <div class="product-title">HEAD Speed Pro</div>
+      </a>
+    </div>
+  </body>
+</html>
