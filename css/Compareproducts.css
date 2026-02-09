@@ -1,3 +1,6 @@
+/* =========================
+   NAVBAR
+========================= */
 .WEBNAV {
   display: flex;
   justify-content: space-between;
@@ -8,15 +11,18 @@
   padding: 0 4.8rem;
   position: relative;
 }
+
 .logo {
   height: 5.2rem;
 }
+
 .main-nav-list {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 4.8rem;
 }
+
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
@@ -26,6 +32,7 @@
   font-size: 1.4rem;
   transition: all 0.3s;
 }
+
 .main-nav-link:hover,
 .main-nav-link:active {
   color: #3d5f3d;
@@ -45,12 +52,19 @@
   background-color: #cf711f;
 }
 
+/* =========================
+   SEARCH BAR
+========================= */
 .search-container {
   position: relative;
   width: 50px;
   transition: width 0.4s ease-in-out;
   overflow: hidden;
   border-radius: 50%;
+}
+
+.search-container:focus-within {
+  width: 200px;
 }
 
 .search-input {
@@ -89,6 +103,14 @@ body {
   color: #1e1e1e;
 }
 
+img {
+  width: 125px;
+  height: 125px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
 h2 {
   font-size: 32px;
   font-weight: 700;
@@ -99,6 +121,9 @@ h2 {
   color: #1e1e1e;
 }
 
+/* =========================
+   TABLE STYLES
+========================= */
 table {
   width: 90%;
   margin: 0 auto;
@@ -132,6 +157,13 @@ table tr:last-child td {
 
 table tr:hover {
   background-color: #fafafa;
+}
+
+/* =========================
+   TABLE COLUMN FORMATTING
+========================= */
+td:nth-child(2) {
+  text-align: center;
 }
 
 td:nth-child(3),
